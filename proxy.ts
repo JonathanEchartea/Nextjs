@@ -4,7 +4,7 @@ import { decrypt, deleteSession } from '@/lib/session';
 
 export async function proxy(request: NextRequest) {
   const singinPage = '/signin/';
-  const nextResponse = NextResponse.next( request );
+  const nextResponse = NextResponse.next( {request});
 
   // if (request.nextUrl.pathname === singinPage) {
   //   deleteSession();
